@@ -1,19 +1,18 @@
-# PythonIntroductionPresentation
+# Python Introduction Presentation
 
-To use this presentation:
+## Requirements
 
-Install vim
+1. Install vim
+2. In vim, install posero (https://github.com/alfredodeza/posero.vim)
 
-In vim, install posero (https://github.com/alfredodeza/posero.vim)
+## Usage
 
-Open demo.posero
-
-Start the presentation:
+Open demo.posero and start the presentation with:
 ```
 :Poseron demo.posero
 ```
 
-Use C^J to step forward in slide
-Use C^K to step back in slide
-Use C^L to go on next slide
-Use C^H ro go on previous slide
+- C^J : step forward in slide
+- C^K : step back in slide
+- C^L : next slide
+- C^H : previous slide
