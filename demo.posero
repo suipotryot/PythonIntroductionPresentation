@@ -1,0 +1,860 @@
+POSERO>> let b:posero_push_all = 0
+
+██████╗ ██╗   ██╗████████╗██╗  ██╗ ██████╗ ███╗   ██╗    ██████╗
+██╔══██╗╚██╗ ██╔╝╚══██╔══╝██║  ██║██╔═══██╗████╗  ██║    ╚════██╗
+██████╔╝ ╚████╔╝    ██║   ███████║██║   ██║██╔██╗ ██║     █████╔╝
+██╔═══╝   ╚██╔╝     ██║   ██╔══██║██║   ██║██║╚██╗██║     ╚═══██╗
+██║        ██║      ██║   ██║  ██║╚██████╔╝██║ ╚████║    ██████╔╝
+╚═╝        ╚═╝      ╚═╝   ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝    ╚═════╝
+                                                           by gus
+
+Subjects:
+    Python basics
+    Advanced tricks
+    Phylosophy
+    Tools
+    REST
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+POSERO>> let b:posero_fake_type = '\v^\$ '
+POSERO>> let b:posero_push_on_non_fake = 1
+POSERO>> let b:posero_syntax = "shell"
+
+██╗███╗   ██╗███████╗████████╗ █████╗ ██╗     ██╗     
+██║████╗  ██║██╔════╝╚══██╔══╝██╔══██╗██║     ██║     
+██║██╔██╗ ██║███████╗   ██║   ███████║██║     ██║     
+██║██║╚██╗██║╚════██║   ██║   ██╔══██║██║     ██║     
+██║██║ ╚████║███████║   ██║   ██║  ██║███████╗███████╗
+╚═╝╚═╝  ╚═══╝╚══════╝   ╚═╝   ╚═╝  ╚═╝╚══════╝╚══════╝
+
+$ python --version
+Python 3.6.4
+
+$ python2.7 --version
+Python 2.7.10
+
+$ python3 --version
+Python 3.6.4
+
+Mac:
+$ brew install python3
+
+Linux:
+$ apt-get install python3
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+POSERO>> let b:posero_fake_type = '\v^\$ |\v^\(python'
+POSERO>> let b:posero_push_on_non_fake = 1
+POSERO>> let b:posero_syntax = "shell"
+
+██████╗ ██╗██████╗        ██╗       ██╗   ██╗██╗██████╗ ████████╗██╗   ██╗ █████╗ ██╗     ███████╗███╗   ██╗██╗   ██╗
+██╔══██╗██║██╔══██╗       ██║       ██║   ██║██║██╔══██╗╚══██╔══╝██║   ██║██╔══██╗██║     ██╔════╝████╗  ██║██║   ██║
+██████╔╝██║██████╔╝    ████████╗    ██║   ██║██║██████╔╝   ██║   ██║   ██║███████║██║     █████╗  ██╔██╗ ██║██║   ██║
+██╔═══╝ ██║██╔═══╝     ██╔═██╔═╝    ╚██╗ ██╔╝██║██╔══██╗   ██║   ██║   ██║██╔══██║██║     ██╔══╝  ██║╚██╗██║╚██╗ ██╔╝
+██║     ██║██║         ██████║       ╚████╔╝ ██║██║  ██║   ██║   ╚██████╔╝██║  ██║███████╗███████╗██║ ╚████║ ╚████╔╝ 
+╚═╝     ╚═╝╚═╝         ╚═════╝        ╚═══╝  ╚═╝╚═╝  ╚═╝   ╚═╝    ╚═════╝ ╚═╝  ╚═╝╚══════╝╚══════╝╚═╝  ╚═══╝  ╚═══╝  
+
+Mac: already with python
+
+Linux: 
+$ apt-get install python3-pip
+
+$ pip freeze
+appnope==0.1.0
+bleach==2.1.2
+[...]
+webencodings==0.5.1
+widgetsnbextension==3.1.3
+
+$ sudo pip install virtualenv
+Requirement already satisfied: virtualenv in /usr/local/lib/python3.6/site-packages
+
+$ virtualenv python_demo
+Using base prefix '/usr/local/Cellar/python/3.6.4_4/Frameworks/Python.framework/Versions/3.6'
+New python executable in /Users/guillaume/norauto/python_demo/python_demo/bin/python3.6
+Also creating executable in /Users/guillaume/norauto/python_demo/python_demo/bin/python
+Installing setuptools, pip, wheel...done.
+
+$ source python_demo/bin/activate
+
+(python_demo) $ pip freeze
+
+(python_demo) $ pip install flask
+Collecting flask
+  Downloading Flask-0.12.2-py2.py3-none-any.whl (83kB)
+    100% |████████████████████████████████| 92kB 1.0MB/s
+Collecting Jinja2>=2.4 (from flask)
+  Using cached Jinja2-2.10-py2.py3-none-any.whl
+Collecting click>=2.0 (from flask)
+  Downloading click-6.7-py2.py3-none-any.whl (71kB)
+    100% |████████████████████████████████| 71kB 1.5MB/s
+Collecting itsdangerous>=0.21 (from flask)
+  Downloading itsdangerous-0.24.tar.gz (46kB)
+    100% |████████████████████████████████| 51kB 1.5MB/s
+Collecting Werkzeug>=0.7 (from flask)
+  Downloading Werkzeug-0.14.1-py2.py3-none-any.whl (322kB)
+    100% |████████████████████████████████| 327kB 1.2MB/s
+Collecting MarkupSafe>=0.23 (from Jinja2>=2.4->flask)
+Building wheels for collected packages: itsdangerous
+  Running setup.py bdist_wheel for itsdangerous ... done
+  Stored in directory: /Users/guillaume/Library/Caches/pip/wheels/fc/a8/66/24d655233c757e178d45dea2de22a04c6d92766abfb741129a
+Successfully built itsdangerous
+Installing collected packages: MarkupSafe, Jinja2, click, itsdangerous, Werkzeug, flask
+Successfully installed Jinja2-2.10 MarkupSafe-1.0 Werkzeug-0.14.1 click-6.7 flask-0.12.2 itsdangerous-0.24
+
+(python_demo) $ pip freeze
+click==6.7
+Flask==0.12.2
+itsdangerous==0.24
+Jinja2==2.10
+MarkupSafe==1.0
+Werkzeug==0.14.1
+
+(python_demo) $ python --version
+Python 3.6.4
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+POSERO>> let b:posero_fake_type = '\v^\$ |\v^\(python'
+POSERO>> let b:posero_push_on_non_fake = 1
+POSERO>> let b:posero_syntax = "ipython"
+
+(python_demo) $ pip freeze > requirements.txt
+
+(python_demo) $ deactivate
+
+$ cd ../my_other_project
+
+$ source other_venv/bin/activate
+
+(other_venv) $ pip install -r requirements.txt
+[...]
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+POSERO>> let b:posero_fake_type = '\v^In [|\v^   ...'
+POSERO>> let b:posero_push_on_non_fake = 1
+POSERO>> let b:posero_syntax = "ipython"
+
+███████╗███████╗███╗   ██╗
+╚══███╔╝██╔════╝████╗  ██║
+  ███╔╝ █████╗  ██╔██╗ ██║
+ ███╔╝  ██╔══╝  ██║╚██╗██║
+███████╗███████╗██║ ╚████║
+╚══════╝╚══════╝╚═╝  ╚═══╝
+
+In [1]: import this
+The Zen of Python, by Tim Peters
+
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren t special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you re Dutch.
+Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it s a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let s do more of those!
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+POSERO>> let b:posero_fake_type = '\v^In '
+POSERO>> let b:posero_push_on_non_fake = 1
+POSERO>> let b:posero_syntax = "ipython"
+
+"Simple is better than complex."
+
+In [0]: import keyword
+
+In [1]: print(keyword.kwlist)
+Out[1]: ['False', 'None', 'True', 'and', 'as', 'assert', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield']
+
+In [2]: len(keyword.kwlist)
+Out[2]: 33
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+POSERO>> let b:posero_fake_type = '\v^In |\v^   ...'
+POSERO>> let b:posero_push_on_non_fake = 1
+POSERO>> let b:posero_syntax = "ipython"
+
+"If it looks like a duck, sounds like a duck and taste like a duck... let's assume it's a duck"
+
+In [1]: print("Python for the win")
+Python for the win
+
+In [2]: a = "hello"
+
+In [3]: b = " futur python addict"
+
+In [4]: a + b
+Out[4]: 'hello futur python addict'
+
+In [5]: c = 18
+
+In [6]: a + c
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-6-e81e582b6fa9> in <module>()
+----> 1 a + c
+
+TypeError: must be str, not int
+
+In [7]: a * c
+Out[7]: 'hellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohello'
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+POSERO>> let b:posero_fake_type = '\v^In |\v^   ...'
+POSERO>> let b:posero_push_on_non_fake = 1
+POSERO>> let b:posero_syntax = "ipython"
+
+"Beautiful is better than ugly."
+
+In [1]: a = "toast"
+
+In [2]: if a == "toast":
+   ...:     print(a)
+toast
+
+In [3]: a = True
+
+In [4]: b = False
+
+In [5]: if a or b:
+   ...:     print("toast")
+toast
+
+In [6]: if a and b:
+   ...:     a = not a
+   ...:     print("toast")
+   ...: else:
+   ...:     print("sausage")
+sausage
+
+In [7]: for number in range(5):
+    ...:     print(number)
+0
+1
+2
+3
+4
+
+In [8]: file = open("testfile.text", "r") 
+   ...: print file.read() 
+   ...: file.close() 
+
+In [9]: with open("testfile.text", 'w') as f:
+    ...:    f.write('Hi there!')
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+POSERO>> let b:posero_fake_type = '\v^In '
+POSERO>> let b:posero_push_on_non_fake = 1
+POSERO>> let b:posero_syntax = "ipython"
+
+"Beautiful is better than ugly."
+
+In [1]: def my_function(name):
+   ...:     return("hello %s" % name)
+   ...: 
+
+In [2]: my_function("Gus")
+Out[2]: 'hello Gus'
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+POSERO>> let b:posero_fake_type = '\v^In |\v^   ...|\v^"'
+POSERO>> let b:posero_push_on_non_fake = 1
+POSERO>> let b:posero_syntax = "ipython"
+
+"Let's play with string"
+
+In [1]: s = "hello"
+
+In [1]: s[0]
+Out[1]: 'h'
+
+In [2]: s[1:4]
+Out[2]: 'ell'
+
+In [3]: s[1:]
+Out[3]: 'ello'
+
+In [4]: s[:]
+Out[4]: 'hello'
+
+In [5]: s[1:200]
+Out[5]: 'ello'
+
+In [6]: s[-1]
+Out[6]: 'o'
+
+In [7]: s[:-2]
+Out[7]: 'hel'
+
+" H   E   L   L   O"
+" 0   1   2   3   4"
+"-5  -4  -3  -2  -1"
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+POSERO>> let b:posero_fake_type = '\v^In |\v^   ...'
+POSERO>> let b:posero_push_on_non_fake = 1
+POSERO>> let b:posero_syntax = "ipython"
+
+"But wait, strings are lists ?"
+
+In [1]: s = "hello"
+
+In [2]: s.append("!")
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+<ipython-input-2-22b82d8177ce> in <module>()
+----> 1 s.append("!")
+
+AttributeError: 'str' object has no attribute 'append'
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+POSERO>> let b:posero_fake_type = '\v^In |\v^   ...'
+POSERO>> let b:posero_push_on_non_fake = 1
+POSERO>> let b:posero_syntax = "ipython"
+
+"Mutable or not mutable (or muchaise)"
+
+In [1]: a = (0, 1)
+
+In [2]: b = [0, 1]
+
+In [3]: a == b
+Out[3]: False
+
+In [4]: b.append(2)
+
+In [5]: b
+Out[5]: [0, 1, 2]
+
+In [6]: a.append(2)
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+<ipython-input-6-fcbc3288b426> in <module>()
+----> 1 a.append(2)
+
+AttributeError: 'tuple' object has no attribute 'append'
+
+In [7]: b[1] = 5
+
+In [8]: b
+Out[8]: [0, 5, 2]
+
+In [9]: a[1] = 5
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-9-8274b6782611> in <module>()
+----> 1 a[1] = 5
+
+TypeError: 'tuple' object does not support item assignment
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+POSERO>> let b:posero_fake_type = '\v^In |\v^   ...'
+POSERO>> let b:posero_push_on_non_fake = 1
+POSERO>> let b:posero_syntax = "ipython"
+
+"Explicit is better than implicit."
+
+In [1]: class ErrorClass:
+   ...:     def __init__(val):
+   ...:         this.val = val
+   ...:
+
+In [2]: an_instance = ErrorClass(18)
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-2-9ea0a5a4e12d> in <module>()
+----> 1 an_instance = ErrorClass(18)
+
+TypeError: __init__() takes 1 positional argument but 2 were given
+
+In [1]: class MyClass:
+   ...:     def __init__(self, value):
+   ...:         self.value = value
+   ...:
+
+In [2]: a = MyClass(12)
+
+In [3]: b = MyClass(14)
+
+In [4]: a.value
+Out[4]: 12
+
+In [5]: b.value
+Out[5]: 14
+
+In [6]: c = MyClass(18)
+
+In [7]: MyClass.__init__(c, 36)
+
+In [8]: c.value
+Out[8]: 36
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+POSERO>> let b:posero_fake_type = '\v^In |\v^   ...'
+POSERO>> let b:posero_push_on_non_fake = 1
+POSERO>> let b:posero_syntax = "ipython"
+
+"Explicit is better than implicit."
+
+In [1]: def reassign(list):
+   ...:   list = [0, 1]
+   ...:
+   ...: def append(list):
+   ...:   list.append(1)
+   ...:
+   ...: list = [0]
+   ...:
+
+In [2]: reassign(list)
+
+In [3]: append(list)
+
+In [4]: list
+Out[4]: [0, 1]
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+POSERO>> let b:posero_fake_type = '\v^In |\v^   ...'
+POSERO>> let b:posero_push_on_non_fake = 1
+POSERO>> let b:posero_syntax = "ipython"
+
+"Special cases aren't special enough to break the rules."
+
+In [1]: "hello".upper()
+Out[1]: 'HELLO'
+
+In [2]: "hello".capitalize()
+Out[2]: 'Hello'
+
+In [3]: 12.4.is_integer()
+Out[3]: False
+
+In [4]: 18.0.is_integer()
+Out[4]: True
+
+In [5]: (12).real
+Out[5]: 12
+
+In [6]: (12).bit_length()
+Out[6]: 4
+
+In [7]: print(issubclass(list,object))
+True
+
+In [8]: print(isinstance(5.5,object))
+True
+
+In [9]: print(isinstance("Hello",object))
+True
+
+In [10]: def f(a):
+    ...:     return a * 12
+
+In [11]: print(isinstance(f, object))
+True
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+POSERO>> let b:posero_fake_type = '\v^In |\v^   ...'
+POSERO>> let b:posero_push_on_non_fake = 1
+POSERO>> let b:posero_syntax = "ipython"
+
+"is and =="
+
+In [1]: a = [0, 1]
+
+In [2]: b = [0, 1]
+
+In [3]: a == b
+Out[3]: True
+
+In [4]: a is b
+Out[4]: False
+
+In [5]: a = 18
+
+In [6]: b = 18
+
+In [7]: a == b
+Out[7]: True
+
+In [8]: a is b
+Out[8]: True
+
+In [9]: a = 257
+
+In [10]: b = 257
+
+In [11]: a == b
+Out[11]: True
+
+In [12]: a is b
+Out[12]: False
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+POSERO>> let b:posero_fake_type = '\v^In |\v^   ...'
+POSERO>> let b:posero_push_on_non_fake = 1
+POSERO>> let b:posero_syntax = "ipython"
+
+"Readability counts"
+
+In [1]: a = "hello"
+
+In [2]: b = "you"
+
+In [3]: a
+Out[3]: 'hello'
+
+In [4]: b
+Out[4]: 'you'
+
+In [5]: a, b = b, a
+
+In [6]: a
+Out[6]: 'you'
+
+In [7]: b
+Out[7]: 'hello'
+
+In [8]: a, b = (a, b), (b, b)
+
+In [9]: a
+Out[9]: ('you', 'hello')
+
+In [10]: b
+Out[10]: ('hello', 'hello')
+
+In [11]: c = (a, b) = (a, a), (b, a, b)
+
+In [12]: a
+Out[12]: (('you', 'hello'), ('you', 'hello'))
+
+In [13]: b
+Out[13]: (('hello', 'hello'), ('you', 'hello'), ('hello', 'hello'))
+
+In [14]: c
+Out[14]:
+((('you', 'hello'), ('you', 'hello')),
+ (('hello', 'hello'), ('you', 'hello'), ('hello', 'hello')))
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+POSERO>> let b:posero_fake_type = '\v^In |\v^   ...'
+POSERO>> let b:posero_push_on_non_fake = 1
+POSERO>> let b:posero_syntax = "ipython"
+
+"Let's play with lists and tuples"
+
+In [1]: a = [4, 12, 65, 18, 1]
+
+In [2]: sorted(a)
+Out[2]: [1, 4, 12, 18, 65]
+
+In [3]: a
+Out[3]: [4, 12, 65, 18, 1]
+
+In [4]: a.sort()
+
+In [5]: a
+Out[5]: [1, 4, 12, 18, 65]
+
+In [6]: [34, 65] + ["hi", 18]
+Out[6]: [34, 65, 'hi', 18]
+
+In [7]: (23, 44) + [12, 9]
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-7-a27782b7c8d9> in <module>()
+----> 1 (23, 44) + [12, 9]
+
+TypeError: can only concatenate tuple (not "list") to tuple
+
+In [8]: (23, 44) + (12, 9)
+Out[8]: (23, 44, 12, 9)
+
+In [9]: a
+Out[9]: [1, 4, 12, 18, 65]
+
+In [10]: 12 in a
+Out[10]: True
+
+In [11]: 13 in a
+Out[11]: False
+
+In [12]: 13 not in a
+Out[12]: True
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+POSERO>> let b:posero_fake_type = '\v^In |\v^   ...'
+POSERO>> let b:posero_push_on_non_fake = 1
+POSERO>> let b:posero_syntax = "ipython"
+
+"List comprehension"
+
+In [1]: squares = [n*n for n in [1, 2, 8, 81]]
+
+In [2]: squares
+Out[2]: [1, 4, 64, 6561]
+
+In [3]: odd_squares = [n*n for n in range(12) if n % 2 == 0]
+
+In [4]: odd_squares
+Out[4]: [0, 4, 16, 36, 64, 100]
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+POSERO>> let b:posero_fake_type = '\v^In |\v^   ...'
+POSERO>> let b:posero_push_on_non_fake = 1
+POSERO>> let b:posero_syntax = "ipython"
+
+██╗████████╗███████╗██████╗  █████╗ ████████╗ ██████╗ ██████╗ ███████╗
+██║╚══██╔══╝██╔════╝██╔══██╗██╔══██╗╚══██╔══╝██╔═══██╗██╔══██╗██╔════╝
+██║   ██║   █████╗  ██████╔╝███████║   ██║   ██║   ██║██████╔╝███████╗
+██║   ██║   ██╔══╝  ██╔══██╗██╔══██║   ██║   ██║   ██║██╔══██╗╚════██║
+██║   ██║   ███████╗██║  ██║██║  ██║   ██║   ╚██████╔╝██║  ██║███████║
+╚═╝   ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝    ╚═════╝ ╚═╝  ╚═╝╚══════╝
+
+In [1]: for i in range(6):
+   ...:     print(i)
+   ...:
+0
+1
+2
+3
+4
+5
+
+In [2]: range(3)
+Out[2]: range(0, 3)
+
+In [3]: for char in "python":
+   ...:     print(char)
+   ...:
+p
+y
+t
+h
+o
+n
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+POSERO>> let b:posero_fake_type = '\v^In |\v^   ...'
+POSERO>> let b:posero_push_on_non_fake = 1
+POSERO>> let b:posero_syntax = "ipython"
+
+"Iterators"
+
+In [4]: array = ["a", 2, 3.8, None]
+
+In [5]: iterator = iter(array)
+
+In [6]: iterator
+Out[6]: <list_iterator at 0x1034bc550>
+
+In [7]: next(iterator)
+Out[7]: 'a'
+
+In [8]: next(iterator)
+Out[8]: 2
+
+In [9]: next(iterator)
+Out[9]: 3.8
+
+In [10]: next(iterator)
+
+In [11]: next(iterator)
+---------------------------------------------------------------------------
+StopIteration                             Traceback (most recent call last)
+<ipython-input-12-4ce711c44abc> in <module>()
+----> 1 next(iterator)
+
+StopIteration:
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+POSERO>> let b:posero_fake_type = '\v^In |\v^   ...'
+POSERO>> let b:posero_push_on_non_fake = 1
+POSERO>> let b:posero_syntax = "ipython"
+
+"So do Iterators"
+
+In [1]: class yrange:
+   ...:     def __init__(self, n):
+   ...:         self.i = 0
+   ...:         self.n = n
+   ...:
+   ...:     def __iter__(self):
+   ...:         return self
+   ...:
+   ...:     def next(self):
+   ...:         if self.i < self.n:
+   ...:             i = self.i
+   ...:             self.i += 1
+   ...:             return i
+   ...:         else:
+   ...:             raise StopIteration()
+   ...:
+
+In [2]: y = yrange(3)
+
+In [3]: y
+Out[3]: <__main__.yrange at 0x10e4af390>
+
+In [4]: y.next()
+Out[4]: 0
+
+In [5]: y.next()
+Out[5]: 1
+
+In [6]: y.next()
+Out[6]: 2
+
+In [7]: y.next()
+---------------------------------------------------------------------------
+StopIteration                             Traceback (most recent call last)
+<ipython-input-7-f133c9b2c881> in <module>()
+----> 1 y.next()
+
+<ipython-input-1-be4fdc7f340b> in next(self)
+     13             return i
+     14         else:
+---> 15             raise StopIteration()
+     16
+
+StopIteration:
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+POSERO>> let b:posero_fake_type = '\v^In |\v^   ...'
+POSERO>> let b:posero_push_on_non_fake = 1
+POSERO>> let b:posero_syntax = "ipython"
+
+ ██████╗ ███████╗███╗   ██╗███████╗██████╗  █████╗ ████████╗ ██████╗ ██████╗ ███████╗
+██╔════╝ ██╔════╝████╗  ██║██╔════╝██╔══██╗██╔══██╗╚══██╔══╝██╔═══██╗██╔══██╗██╔════╝
+██║  ███╗█████╗  ██╔██╗ ██║█████╗  ██████╔╝███████║   ██║   ██║   ██║██████╔╝███████╗
+██║   ██║██╔══╝  ██║╚██╗██║██╔══╝  ██╔══██╗██╔══██║   ██║   ██║   ██║██╔══██╗╚════██║
+╚██████╔╝███████╗██║ ╚████║███████╗██║  ██║██║  ██║   ██║   ╚██████╔╝██║  ██║███████║
+ ╚═════╝ ╚══════╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝    ╚═════╝ ╚═╝  ╚═╝╚══════╝
+
+In [1]: def yrange(n):
+   ...:     i = 0
+   ...:     while i < n:
+   ...:         yield i
+   ...:         i += 1
+   ...:
+
+In [2]: y = yrange(3)
+
+In [3]: y
+Out[3]: <generator object yrange at 0x107ed6f10>
+
+In [4]: next(y)
+Out[4]: 0
+
+In [5]: next(y)
+Out[5]: 1
+
+In [6]: next(y)
+Out[6]: 2
+
+In [7]: next(y)
+---------------------------------------------------------------------------
+StopIteration                             Traceback (most recent call last)
+<ipython-input-7-81b9d2f0f16a> in <module>()
+----> 1 next(y)
+
+StopIteration:
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+POSERO>> let b:posero_fake_type = '\v^In |\v^   ...'
+POSERO>> let b:posero_push_on_non_fake = 1
+POSERO>> let b:posero_syntax = "ipython"
+
+"Generator"
+
+In [1]: def integers():
+   ...:     """Infinite sequence of integers."""
+   ...:     i = 1
+   ...:     while True:
+   ...:         yield i
+   ...:         i = i + 1
+   ...:
+   ...: def squares():
+   ...:     for i in integers():
+   ...:         yield i * i
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+POSERO>> let b:posero_fake_type = '\v^In |\v^   ...'
+POSERO>> let b:posero_push_on_non_fake = 1
+POSERO>> let b:posero_syntax = "ipython"
+
+In [1]: def tortues():
+   ...:     print("kawabunga")
+   ...:  
+   ...: tortues()
+kawabunga
+
+In [2]: def tortues():
+   ...:     print("kawabunga")
+   ...:  
+   ...: if __name__ == '__main__':
+   ...:     tortues()
+kawabunga
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+POSERO>> let b:posero_fake_type = '\v^In |\v^   ...'
+POSERO>> let b:posero_push_on_non_fake = 1
+POSERO>> let b:posero_syntax = "ipython"
+
+"Python is batteries included"
+
+In [1]: 18 / 7
+Out[1]: 2.5714285714285716
+
+In [2]: 18 // 7
+Out[2]: 2
+
+In [3]: 239129832423945299328492377579134819254715 * 2198291741927402157012571923753927349279383219482984923419283912849123749124
+Out[3]: 525677135866042484545619370681443393970493773357224885376346500796319438841721361002809025539126386366893704314119660
+
+In [4]: 4**2
+Out[4]: 16
+
+In [5]: 18 % 11
+Out[5]: 7
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+POSERO>> let b:posero_fake_type = '\v^\d'
+POSERO>> let b:posero_push_on_non_fake = 1
+POSERO>> let b:posero_syntax = "ipython"
+
+ ██╗ ██████╗     ██████╗ ███████╗ █████╗ ███████╗ ██████╗ ███╗   ██╗███████╗
+███║██╔═████╗    ██╔══██╗██╔════╝██╔══██╗██╔════╝██╔═══██╗████╗  ██║██╔════╝
+╚██║██║██╔██║    ██████╔╝█████╗  ███████║███████╗██║   ██║██╔██╗ ██║███████╗
+ ██║████╔╝██║    ██╔══██╗██╔══╝  ██╔══██║╚════██║██║   ██║██║╚██╗██║╚════██║
+ ██║╚██████╔╝    ██║  ██║███████╗██║  ██║███████║╚██████╔╝██║ ╚████║███████║
+ ╚═╝ ╚═════╝     ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚══════╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝
+                                                              to like Python
+
+1 > Python is installed by default almost everywhere.
+2 > Python does not need IDE.
+3 > Python is there since 1990 and for a while.
+4 > Python is batteries included.
+5 > Python is fair play.
+6 > Python forces readability.
+7 > Python make us save time.
+8 > Python has a lot of (good) doc.
+9 > Python is hackable.
+10 > Python makes me happy.
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+POSERO>> let b:posero_push_all = 0
+
+PYTHON (3) by gdubus
+
+Some questions
