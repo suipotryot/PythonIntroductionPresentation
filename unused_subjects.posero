@@ -1,0 +1,245 @@
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+POSERO>> let b:posero_fake_type = '\v^In |\v^   ...|\v^"'
+POSERO>> let b:posero_push_on_non_fake = 1
+POSERO>> let b:posero_syntax = "ipython"
+
+ ██╗
+██╔╝
+██║ 
+██║ 
+╚██╗
+ ╚═╝
+
+"Mutable or not mutable"
+
+In [1]: lotr_characters = ["sam", "frodo"]
+
+In [2]: lotr_characters.append("merry")
+
+In [3]: lotr_characters
+Out[3]: ['sam', 'frodo', 'merry']
+
+In [4]: lotr_characters += ["bilbon", "pippin"]
+
+In [5]: lotr_characters
+Out[5]: ['sam', 'frodo', 'merry', 'bilbon', 'pippin']
+
+In [6]: sorted(lotr_characters)
+Out[6]: ['bilbon', 'frodo', 'merry', 'pippin', 'sam']
+
+In [7]: ring_barrers = ("frodo", "sam")
+
+In [8]: ring_barrers.append("merry")
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+<ipython-input-8-e4aa34804388> in <module>()
+----> 1 ring_barrers.append("merry")
+
+AttributeError: 'tuple' object has no attribute 'append'
+
+In [9]: ring_barrers += ("bilbo",)
+
+In [10]: ring_barrers
+Out[10]: ('frodo', 'sam', 'bilbo')
+
+In [11]: ring_barrers + lotr_characters
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-13-cab99913bc3d> in <module>()
+----> 1 ring_barrers + lotr_characters
+
+TypeError: can only concatenate tuple (not "list") to tuple
+
+██╗ 
+╚██╗
+ ██║
+ ██║
+██╔╝
+╚═╝ 
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+POSERO>> let b:posero_fake_type = '\v^In |\v^   ...'
+POSERO>> let b:posero_push_on_non_fake = 1
+POSERO>> let b:posero_syntax = "ipython"
+
+"Iterators"
+
+In [4]: array = ["a", 2, 3.8, None]
+
+In [5]: iterator = iter(array)
+
+In [6]: iterator
+Out[6]: <list_iterator at 0x1034bc550>
+
+In [7]: next(iterator)
+Out[7]: 'a'
+
+In [8]: next(iterator)
+Out[8]: 2
+
+In [9]: next(iterator)
+Out[9]: 3.8
+
+In [10]: next(iterator)
+
+In [11]: next(iterator)
+---------------------------------------------------------------------------
+StopIteration                             Traceback (most recent call last)
+<ipython-input-12-4ce711c44abc> in <module>()
+----> 1 next(iterator)
+
+StopIteration:
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+POSERO>> let b:posero_fake_type = '\v^In |\v^   ...'
+POSERO>> let b:posero_push_on_non_fake = 1
+POSERO>> let b:posero_syntax = "ipython"
+
+"So do Iterators"
+
+In [1]: class yrange:
+   ...:     def __init__(self, n):
+   ...:         self.i = 0
+   ...:         self.n = n
+   ...:
+   ...:     def __iter__(self):
+   ...:         return self
+   ...:
+   ...:     def next(self):
+   ...:         if self.i < self.n:
+   ...:             i = self.i
+   ...:             self.i += 1
+   ...:             return i
+   ...:         else:
+   ...:             raise StopIteration()
+   ...:
+
+In [2]: y = yrange(3)
+
+In [3]: y
+Out[3]: <__main__.yrange at 0x10e4af390>
+
+In [4]: y.next()
+Out[4]: 0
+
+In [5]: y.next()
+Out[5]: 1
+
+In [6]: y.next()
+Out[6]: 2
+
+In [7]: y.next()
+---------------------------------------------------------------------------
+StopIteration                             Traceback (most recent call last)
+<ipython-input-7-f133c9b2c881> in <module>()
+----> 1 y.next()
+
+<ipython-input-1-be4fdc7f340b> in next(self)
+     13             return i
+     14         else:
+---> 15             raise StopIteration()
+     16
+
+StopIteration:
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+POSERO>> let b:posero_fake_type = '\v^In |\v^   ...'
+POSERO>> let b:posero_push_on_non_fake = 1
+POSERO>> let b:posero_syntax = "ipython"
+
+ ██████╗ ███████╗███╗   ██╗███████╗██████╗  █████╗ ████████╗ ██████╗ ██████╗ ███████╗
+██╔════╝ ██╔════╝████╗  ██║██╔════╝██╔══██╗██╔══██╗╚══██╔══╝██╔═══██╗██╔══██╗██╔════╝
+██║  ███╗█████╗  ██╔██╗ ██║█████╗  ██████╔╝███████║   ██║   ██║   ██║██████╔╝███████╗
+██║   ██║██╔══╝  ██║╚██╗██║██╔══╝  ██╔══██╗██╔══██║   ██║   ██║   ██║██╔══██╗╚════██║
+╚██████╔╝███████╗██║ ╚████║███████╗██║  ██║██║  ██║   ██║   ╚██████╔╝██║  ██║███████║
+ ╚═════╝ ╚══════╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝    ╚═════╝ ╚═╝  ╚═╝╚══════╝
+
+In [1]: def yrange(n):
+   ...:     i = 0
+   ...:     while i < n:
+   ...:         yield i
+   ...:         i += 1
+   ...:
+
+In [2]: y = yrange(3)
+
+In [3]: y
+Out[3]: <generator object yrange at 0x107ed6f10>
+
+In [4]: next(y)
+Out[4]: 0
+
+In [5]: next(y)
+Out[5]: 1
+
+In [6]: next(y)
+Out[6]: 2
+
+In [7]: next(y)
+---------------------------------------------------------------------------
+StopIteration                             Traceback (most recent call last)
+<ipython-input-7-81b9d2f0f16a> in <module>()
+----> 1 next(y)
+
+StopIteration:
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+POSERO>> let b:posero_fake_type = '\v^In |\v^   ...'
+POSERO>> let b:posero_push_on_non_fake = 1
+POSERO>> let b:posero_syntax = "ipython"
+
+"Generator"
+
+In [1]: def integers():
+   ...:     """Infinite sequence of integers."""
+   ...:     i = 1
+   ...:     while True:
+   ...:         yield i
+   ...:         i = i + 1
+   ...:
+   ...: def squares():
+   ...:     for i in integers():
+   ...:         yield i * i
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+POSERO>> let b:posero_fake_type = '\v^In |\v^   ...'
+POSERO>> let b:posero_push_on_non_fake = 1
+POSERO>> let b:posero_syntax = "ipython"
+
+In [1]: def tortues():
+   ...:     print("kawabunga")
+   ...:  
+   ...: tortues()
+kawabunga
+
+In [2]: def tortues():
+   ...:     print("kawabunga")
+   ...:  
+   ...: if __name__ == '__main__':
+   ...:     tortues()
+kawabunga
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+POSERO>> let b:posero_fake_type = '\v^In |\v^   ...'
+POSERO>> let b:posero_push_on_non_fake = 1
+POSERO>> let b:posero_syntax = "ipython"
+
+"Python is batteries included"
+
+In [1]: 18 / 7
+Out[1]: 2.5714285714285716
+
+In [2]: 18 // 7
+Out[2]: 2
+
+In [3]: 239129832423945299328492377579134819254715 * 2198291741927402157012571923753927349279383219482984923419283912849123749124
+Out[3]: 525677135866042484545619370681443393970493773357224885376346500796319438841721361002809025539126386366893704314119660
+
+In [4]: 4**2
+Out[4]: 16
+
+In [5]: 18 % 11
+Out[5]: 7
+
+
