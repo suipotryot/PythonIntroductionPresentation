@@ -1,0 +1,44 @@
+| Appareil électrique                             | Puissance min (Watts) | Puissance max (Watts) | Période d’utilisation | Fréquence d’utilisation | Consommation annuelle moyenne |
+| Frigo combi (250 litres), label A+              | 150                   | 200                   | 365 jours             | En continu              | 201 kWh *                     |
+| Frigo combi (250 litres), label C               | 200                   | 350                   | 365 jours             | En continu              | 500 kWh                       |
+| Conditionnement d'air                           | 2600                  | 4000                  | 60 jours              | 5h/jour                 | 960 kWh                       |
+| TV tube cathodique en service                   | 80                    | 100                   | 335 jours             | 4h/jour                 | 121 kWh                       |
+| TV tube cathodique en mode veille               | 4                     | 10                    | 365 jours             | En continu              | 59 kWh                        |
+| TV LCD en service                               | 90                    | 250                   | 335 jours             | 4h/jour                 | 241 kWh                       |
+| TV LCD en mode veille                           | 3                     | 3                     | 365 jours             | En continu              | 22 kWh                        |
+| TV plasma en service                            | 261                   | 344                   | 335 jours             | 4h/jour                 | 402 kWh                       |
+| TV plasma en mode veille                        | 3                     | 3                     | 365 jours             | En continu              | 22 kWh                        |
+| Ordinateur avec écran cathodique                | 100                   | 120                   | 240 jours             | 4 h/jour                | 106 kWh                       |
+| Ordinateur avec écran cathodique en mode veille | 40                    | 60                    | 365 jours             | En continu              | 400 kWh                       |
+| Ordinateur avec écran plat                      | 70                    | 80                    | 240 jours             | 4 h/jour                | 72 kWh                        |
+| Ordinateur avec écran plat en mode veille       | 3                     | 3                     | 365 jours             | En continu              | 25 kWh                        |
+| Machine à laver AAA (coton 60°C)                | 2000                  | 2200                  | 48 semaines           | 4 cycles/semaine        | 0,9 kWh/cycle ->173 kWh**     |
+| Machine à laver C (coton 60°C)                  | 2500                  | 3000                  | 48 semaines           | 4 cycles/semaine        | 1,35 kWh/cycle -> 259 kWh**   |
+| Sèche-Linge C                                   | 2500                  | 3000                  | 32 semaines           | 2 fois/semaine          | 3 kWh/cycle -> 192 kWh        |
+| Fer à repasser                                  | 750                   | 1100                  | 48 semaines           | 5h/semaine              | 260 kWh                       |
+| Machine à coudre                                | 70                    | 100                   | 48 semaines           | 1h/semaine              | 4 kWh                         |
+| Aspirateur                                      | 650                   | 800                   | 48 semaines           | 2h/semaine              | 70 kWh                        |
+| Rasoir électrique                               | 8                     | 12                    | 335 jours             | 5 min./jour             | 0,3 kWh                       |
+| Sèche cheveux                                   | 300                   | 600                   | 48 semaines           | 30 min./jour            | 11 kWh                        |
+| Lampadaire avec lampe économique                | 15                    | 25                    | 335 jours             | 5 h/jour                | 34 kWh                        |
+| Ampoules à incandescence : 3 ampoules 3h/jour   | 100                   | 200                   | 335 jours             | 3 h/jour                | 151 kWh                       |
+| Lampe halogène sur pied 300 W                   | 300                   | 300                   | 335 jours             | 5 h/jour                | 503 kWh                       |
+| Aquarium                                        | 100                   | 300                   | 365 jours             | en continu              | 876 kWh                       |
+| Cuisinière (taque classique) à four             | 8000                  | 10000                 | 35 min/jour           | 928 kWh                 |
+| Four classique                                  | 2000                  | 2500                  | 48 semaines           | 1.5 h/semaine           | 162 kWh                       |
+| Four micro-ondes                                | 1000                  | 1500                  | 48 semaines           | 1.5 h/semaine           | 90 kWh                        |
+| Friteuse                                        | 1500                  | 2000                  | 48 semaines           | 1 h/semaine             | 84 kWh                        |
+| Grille viande                                   | 1000                  | 1000                  | 48 semaines           | 10 min./semaine         | 8 kWh                         |
+| cafetière                                       | 500                   | 1000                  | 335 jours             | 10 min./jour            | 42 kWh                        |
+| Gaufrier                                        | 800                   | 1200                  | 15 jours              | 1h/jour                 | 15 kWh                        |
+| Grille-pain                                     | 500                   | 1000                  | 48 semaines           | 10 min./semaine         | 5 kWh                         |
+| Mixer/mixe soupe                                | 100                   | 150                   | 48 semaines           | 10 min./semaine         | 1 kWh                         |
+| Hotte                                           | 70                    | 150                   | 335 jours             | 40 min./jour            | 25 kWh                        |
+| Lave-vaisselle                                  | 1200                  | 1200                  | 48 semaines           | 5 fois/semaine          | 288 kWh                       |
+| Boiler 100 l (tarif bihoraire)                  | 2000                  | 2500                  | 335 jours             | 80l/jour                | 1554 kWh ***                  |
+| Boiler 5l, sous évier                           | 2500                  | 2500                  | 335 jours             | 10l/jour                | 194 kWh                       |
+| Circulateur chauffage central (permanent)       | 40                    | 60                    | 240 jours             | En continu              | 288 kWh                       |
+| Circulateur chauffage central (non permanent)   | 40                    | 60                    | 240 jours             | 6h/jour                 | 72 kWh                        |
+| Appoint électrique                              | 1000                  | 2000                  | 240 jours             | 30 min/jour             | 180 kWh                       |
+| Radio-réveil                                    | 3                     | 6                     | 365 jours             | En continu              | 20 kWh                        |
+| Tondeuse électrique                             | 1000                  | 1500                  | 32 semaines           | 1h/semaine              | 40 kWh                        |

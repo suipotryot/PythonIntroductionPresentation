@@ -6,11 +6,11 @@ POSERO>> let b:posero_push_all = 0
 ██╔═══╝   ╚██╔╝     ██║   ██╔══██║██║   ██║██║╚██╗██║     ╚═══██╗
 ██║        ██║      ██║   ██║  ██║╚██████╔╝██║ ╚████║    ██████╔╝
 ╚═╝        ╚═╝      ╚═╝   ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝    ╚═════╝
-                                                           by gus
+                                                           by Gus
 
 Subjects:
     Python basics
-    Advanced tricks
+    Advanced trick(s)
     Phylosophy
     Tools
     REST
@@ -130,7 +130,7 @@ $ source other_venv/bin/activate
 [...]
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-POSERO>> let b:posero_fake_type = '\v^In [|\v^   ...'
+POSERO>> let b:posero_fake_type = '\v^In [|\v^   ...|>'
 POSERO>> let b:posero_push_on_non_fake = 1
 POSERO>> let b:posero_syntax = "ipython"
 
@@ -140,6 +140,11 @@ POSERO>> let b:posero_syntax = "ipython"
  ███╔╝  ██╔══╝  ██║╚██╗██║
 ███████╗███████╗██║ ╚████║
 ╚══════╝╚══════╝╚═╝  ╚═══╝
+
+> MacBook-Pro-de-Guillaume:PythonIntroductionPresentation guillaume$ ipython3 
+Python 3.6.5 (default, Apr 25 2018, 14:26:36) 
+Type 'copyright', 'credits' or 'license' for more information
+IPython 6.2.1 -- An enhanced Interactive Python. Type '?' for help.
 
 In [1]: import this
 The Zen of Python, by Tim Peters
@@ -151,18 +156,23 @@ Complex is better than complicated.
 Flat is better than nested.
 Sparse is better than dense.
 Readability counts.
-Special cases aren t special enough to break the rules.
-Although practicality beats purity.
-Errors should never pass silently.
-Unless explicitly silenced.
+[...]
 In the face of ambiguity, refuse the temptation to guess.
-There should be one-- and preferably only one --obvious way to do it.
-Although that way may not be obvious at first unless you re Dutch.
-Now is better than never.
-Although never is often better than *right* now.
+[...]
 If the implementation is hard to explain, it s a bad idea.
-If the implementation is easy to explain, it may be a good idea.
-Namespaces are one honking great idea -- let s do more of those!
+[...]
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+POSERO>> let b:posero_fake_type = '\v^In '
+POSERO>> let b:posero_push_on_non_fake = 1
+POSERO>> let b:posero_syntax = "ipython"
+
+"Readability counts." => Block == Indent
+
+In [1]: if 42 > 12:
+   ...:     print("Beware of the groove !")
+
+Beware of the groove !
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 POSERO>> let b:posero_fake_type = '\v^In '
@@ -184,7 +194,7 @@ POSERO>> let b:posero_fake_type = '\v^In |\v^   ...'
 POSERO>> let b:posero_push_on_non_fake = 1
 POSERO>> let b:posero_syntax = "ipython"
 
-"If it looks like a duck, sounds like a duck and taste like a duck... let's assume it's a duck"
+"Duck typing"
 
 In [1]: print("Python for the win")
 Python for the win
@@ -210,157 +220,192 @@ In [7]: a * c
 Out[7]: 'hellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohello'
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-POSERO>> let b:posero_fake_type = '\v^In |\v^   ...'
+POSERO>> let b:posero_fake_type = '\v^In |\v^   ...|\v^"'
 POSERO>> let b:posero_push_on_non_fake = 1
 POSERO>> let b:posero_syntax = "ipython"
 
-"Beautiful is better than ugly."
+1. Get the data
 
-In [1]: a = "toast"
+$ ipython
+Python 3.6.5 (default, Apr 25 2018, 14:26:36) 
+Type 'copyright', 'credits' or 'license' for more information
+IPython 6.2.1 -- An enhanced Interactive Python. Type '?' for help.
 
-In [2]: if a == "toast":
-   ...:     print(a)
-toast
+In [1]: data_file = open("electrical_counsumption.data", "r")
 
-In [3]: a = True
+In [2]: data_file.read()
+Out[2]: "
+| Appareil électrique                             | Puissance en Watts | Période d’utilisation | Fréquence d’utilisation | Consommation annuelle moyenne |
+| Frigo combi (250 litres), label A+              | 150 à 200 W        | 365 jours             | En continu              | 201 kWh *                     |
+| Frigo combi (250 litres), label C               | 200 à 350 W        | 365 jours             | En continu              | 500 kWh                       |
+| Conditionnement d'air                           | 2600 à 4000 W      | 60 jours              | 5h/jour                 | 960 kWh                       |
+| TV tube cathodique en service                   | 80 à 100 W         | 335 jours             | 4h/jour                 | 121 kWh                       |
+[...]
+"
 
-In [4]: b = False
+In [3]: data_file.close()
 
-In [5]: if a or b:
-   ...:     print("toast")
-toast
+In [4]: with open("electrical_counsumption.data", "r") as data_file:
+   ...:     data_raw = data_file.read()
 
-In [6]: if a and b:
-   ...:     a = not a
-   ...:     print("toast")
-   ...: else:
-   ...:     print("sausage")
-sausage
+In [5]: with open("electrical_counsumption.data", "r") as data_file:
+   ...:     data_raw = data_file.read()
+   ...:     for row in data:
+   ...:         print(row)
 
-In [7]: for number in range(5):
-    ...:     print(number)
-0
-1
-2
-3
-4
+[...] // All characters of our string
 
-In [8]: file = open("testfile.text", "r") 
-   ...: print file.read() 
-   ...: file.close() 
+In [6]: with open("electrical_counsumption.data", "r") as data_file:
+   ...:     data_raw = data_file.read()
+   ...:     for row in data_raw.split("\n"):
+   ...:         row.split("|")
 
-In [9]: with open("testfile.text", 'w') as f:
-    ...:    f.write('Hi there!')
+['', ' Appareil électrique                            ', 'Puissance en Watts', 'Période d’utilisation', 'Fréquence d’utilisation', 'Consommation annuelle moyenne ', '']
+['', ' Frigo combi (250 litres), label A+             ', '150 à 200 W       ', '365 jours            ', 'En continu             ', '201 kWh *                     ', '']
+['', ' Frigo combi (250 litres), label C              ', '200 à 350 W       ', '365 jours            ', 'En continu             ', '500 kWh                       ', '']
+['', ' Conditionnement d'air                          ', '2600 à 4000 W     ', '60 jours             ', '5h/jour                ', '960 kWh                       ', '']
 
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-POSERO>> let b:posero_fake_type = '\v^In '
-POSERO>> let b:posero_push_on_non_fake = 1
-POSERO>> let b:posero_syntax = "ipython"
+In [7]: with open("electrical_counsumption.data", "r") as data_file:
+   ...:     data_raw = data_file.read()
+   ...:     for row in data_raw.split("\n"):
+   ...:         cells = row.split("|")
+   ...:         for cell in cells:
+   ...:             cell.strip()
 
-"Beautiful is better than ugly."
-
-In [1]: def my_function(name):
-   ...:     return("hello %s" % name)
-   ...: 
-
-In [2]: my_function("Gus")
-Out[2]: 'hello Gus'
+Appareil électrique
+Puissance en Watts
+Période d’utilisation
+[...]
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 POSERO>> let b:posero_fake_type = '\v^In |\v^   ...|\v^"'
 POSERO>> let b:posero_push_on_non_fake = 1
 POSERO>> let b:posero_syntax = "ipython"
 
-"Let's play with string"
+1. List comprehension
 
-In [1]: s = "hello"
+In [1]: with open("electrical_counsumption.data", "r") as data_file:
+   ...:     data_raw = data_file.read()
+   ...:     for row in data_raw.split("\n"):
+   ...:         cells = row.split("|")
+   ...:         [cell.strip() for cell in cells]
 
-In [1]: s[0]
-Out[1]: 'h'
+['', 'Appareil électrique', 'Puissance en Watts', 'Période d’utilisation', 'Fréquence d’utilisation', 'Consommation annuelle moyenne', '']
+['', 'Frigo combi (250 litres), label A+', '150 à 200 W', '365 jours', 'En continu', '201 kWh *', '']
+['', 'Frigo combi (250 litres), label C', '200 à 350 W', '365 jours', 'En continu', '500 kWh', '']
+[...]
 
-In [2]: s[1:4]
-Out[2]: 'ell'
+In [2]: with open("electrical_counsumption.data", "r") as data_file:
+   ...:     data_raw = data_file.read()
+   ...:     for row in data_raw.split("\n"):
+   ...:         cells = row.split("|")
+   ...:         [cell.strip() for cell in cells if cell != '']
 
-In [3]: s[1:]
-Out[3]: 'ello'
-
-In [4]: s[:]
-Out[4]: 'hello'
-
-In [5]: s[1:200]
-Out[5]: 'ello'
-
-In [6]: s[-1]
-Out[6]: 'o'
-
-In [7]: s[:-2]
-Out[7]: 'hel'
-
-" H   E   L   L   O"
-" 0   1   2   3   4"
-"-5  -4  -3  -2  -1"
+['Appareil électrique', 'Puissance en Watts', 'Période d’utilisation', 'Fréquence d’utilisation', 'Consommation annuelle moyenne']
+['Frigo combi (250 litres), label A+', '150 à 200 W', '365 jours', 'En continu', '201 kWh *']
+['Frigo combi (250 litres), label C', '200 à 350 W', '365 jours', 'En continu', '500 kWh']
+[...]
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-POSERO>> let b:posero_fake_type = '\v^In |\v^   ...'
+POSERO>> let b:posero_fake_type = '\v^In |\v^   ...|\v^"'
 POSERO>> let b:posero_push_on_non_fake = 1
 POSERO>> let b:posero_syntax = "ipython"
 
-"But wait, strings are lists ?"
+ ██╗
+██╔╝
+██║ 
+██║ 
+╚██╗
+ ╚═╝
 
-In [1]: s = "hello"
+"Mutable or not mutable"
 
-In [2]: s.append("!")
+In [1]: lotr_characters = ["sam", "frodo"]
+
+In [2]: lotr_characters.append("merry")
+
+In [3]: lotr_characters
+Out[3]: ['sam', 'frodo', 'merry']
+
+In [4]: lotr_characters += ["bilbon", "pippin"]
+
+In [5]: lotr_characters
+Out[5]: ['sam', 'frodo', 'merry', 'bilbon', 'pippin']
+
+In [6]: sorted(lotr_characters)
+Out[6]: ['bilbon', 'frodo', 'merry', 'pippin', 'sam']
+
+In [7]: ring_barrers = ("frodo", "sam")
+
+In [8]: ring_barrers.append("merry")
 ---------------------------------------------------------------------------
 AttributeError                            Traceback (most recent call last)
-<ipython-input-2-22b82d8177ce> in <module>()
-----> 1 s.append("!")
-
-AttributeError: 'str' object has no attribute 'append'
-
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-POSERO>> let b:posero_fake_type = '\v^In |\v^   ...'
-POSERO>> let b:posero_push_on_non_fake = 1
-POSERO>> let b:posero_syntax = "ipython"
-
-"Mutable or not mutable (or muchaise)"
-
-In [1]: a = (0, 1)
-
-In [2]: b = [0, 1]
-
-In [3]: a == b
-Out[3]: False
-
-In [4]: b.append(2)
-
-In [5]: b
-Out[5]: [0, 1, 2]
-
-In [6]: a.append(2)
----------------------------------------------------------------------------
-AttributeError                            Traceback (most recent call last)
-<ipython-input-6-fcbc3288b426> in <module>()
-----> 1 a.append(2)
+<ipython-input-8-e4aa34804388> in <module>()
+----> 1 ring_barrers.append("merry")
 
 AttributeError: 'tuple' object has no attribute 'append'
 
-In [7]: b[1] = 5
+In [9]: ring_barrers += ("bilbo",)
 
-In [8]: b
-Out[8]: [0, 5, 2]
+In [10]: ring_barrers
+Out[10]: ('frodo', 'sam', 'bilbo')
 
-In [9]: a[1] = 5
+In [11]: ring_barrers + lotr_characters
 ---------------------------------------------------------------------------
 TypeError                                 Traceback (most recent call last)
-<ipython-input-9-8274b6782611> in <module>()
-----> 1 a[1] = 5
+<ipython-input-13-cab99913bc3d> in <module>()
+----> 1 ring_barrers + lotr_characters
 
-TypeError: 'tuple' object does not support item assignment
+TypeError: can only concatenate tuple (not "list") to tuple
+
+██╗ 
+╚██╗
+ ██║
+ ██║
+██╔╝
+╚═╝ 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 POSERO>> let b:posero_fake_type = '\v^In |\v^   ...'
 POSERO>> let b:posero_push_on_non_fake = 1
+POSERO>> let b:posero_syntax = "python"
+
+# electrical_counsumption.py
+def fetch_data():
+    data = []
+    with open("electrical_counsumption.data", "r") as data_file:
+        data_raw = data_file.read()
+        for row in data_raw.split("\n"):
+            cells = row.split("|")
+            data.append([cell.strip() for cell in cells if cell != ''])
+    return data 
+
+fetch_data()
+
+# electrical_counsumption.py
+def fetch_data():
+    data = []
+    with open("electrical_counsumption.data", "r") as data_file:
+        data_raw = data_file.read()
+        for row in data_raw.split("\n"):
+            cells = row.split("|")
+            data.append([cell.strip() for cell in cells if cell != ''])
+    return data 
+
+if __name__ == "__main__":
+    fetch_data()
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+POSERO>> let b:posero_fake_type = '\v^In |\v^   ...|\v^"'
+POSERO>> let b:posero_push_on_non_fake = 1
 POSERO>> let b:posero_syntax = "ipython"
+
+ ██╗
+██╔╝
+██║ 
+██║ 
+╚██╗
+ ╚═╝
 
 "Explicit is better than implicit."
 
@@ -380,7 +425,6 @@ TypeError: __init__() takes 1 positional argument but 2 were given
 In [1]: class MyClass:
    ...:     def __init__(self, value):
    ...:         self.value = value
-   ...:
 
 In [2]: a = MyClass(12)
 
@@ -399,28 +443,12 @@ In [7]: MyClass.__init__(c, 36)
 In [8]: c.value
 Out[8]: 36
 
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-POSERO>> let b:posero_fake_type = '\v^In |\v^   ...'
-POSERO>> let b:posero_push_on_non_fake = 1
-POSERO>> let b:posero_syntax = "ipython"
-
-"Explicit is better than implicit."
-
-In [1]: def reassign(list):
-   ...:   list = [0, 1]
-   ...:
-   ...: def append(list):
-   ...:   list.append(1)
-   ...:
-   ...: list = [0]
-   ...:
-
-In [2]: reassign(list)
-
-In [3]: append(list)
-
-In [4]: list
-Out[4]: [0, 1]
+██╗ 
+╚██╗
+ ██║
+ ██║
+██╔╝
+╚═╝ 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 POSERO>> let b:posero_fake_type = '\v^In |\v^   ...'
@@ -478,170 +506,6 @@ Out[3]: True
 
 In [4]: a is b
 Out[4]: False
-
-In [5]: a = 18
-
-In [6]: b = 18
-
-In [7]: a == b
-Out[7]: True
-
-In [8]: a is b
-Out[8]: True
-
-In [9]: a = 257
-
-In [10]: b = 257
-
-In [11]: a == b
-Out[11]: True
-
-In [12]: a is b
-Out[12]: False
-
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-POSERO>> let b:posero_fake_type = '\v^In |\v^   ...'
-POSERO>> let b:posero_push_on_non_fake = 1
-POSERO>> let b:posero_syntax = "ipython"
-
-"Readability counts"
-
-In [1]: a = "hello"
-
-In [2]: b = "you"
-
-In [3]: a
-Out[3]: 'hello'
-
-In [4]: b
-Out[4]: 'you'
-
-In [5]: a, b = b, a
-
-In [6]: a
-Out[6]: 'you'
-
-In [7]: b
-Out[7]: 'hello'
-
-In [8]: a, b = (a, b), (b, b)
-
-In [9]: a
-Out[9]: ('you', 'hello')
-
-In [10]: b
-Out[10]: ('hello', 'hello')
-
-In [11]: c = (a, b) = (a, a), (b, a, b)
-
-In [12]: a
-Out[12]: (('you', 'hello'), ('you', 'hello'))
-
-In [13]: b
-Out[13]: (('hello', 'hello'), ('you', 'hello'), ('hello', 'hello'))
-
-In [14]: c
-Out[14]:
-((('you', 'hello'), ('you', 'hello')),
- (('hello', 'hello'), ('you', 'hello'), ('hello', 'hello')))
-
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-POSERO>> let b:posero_fake_type = '\v^In |\v^   ...'
-POSERO>> let b:posero_push_on_non_fake = 1
-POSERO>> let b:posero_syntax = "ipython"
-
-"Let's play with lists and tuples"
-
-In [1]: a = [4, 12, 65, 18, 1]
-
-In [2]: sorted(a)
-Out[2]: [1, 4, 12, 18, 65]
-
-In [3]: a
-Out[3]: [4, 12, 65, 18, 1]
-
-In [4]: a.sort()
-
-In [5]: a
-Out[5]: [1, 4, 12, 18, 65]
-
-In [6]: [34, 65] + ["hi", 18]
-Out[6]: [34, 65, 'hi', 18]
-
-In [7]: (23, 44) + [12, 9]
----------------------------------------------------------------------------
-TypeError                                 Traceback (most recent call last)
-<ipython-input-7-a27782b7c8d9> in <module>()
-----> 1 (23, 44) + [12, 9]
-
-TypeError: can only concatenate tuple (not "list") to tuple
-
-In [8]: (23, 44) + (12, 9)
-Out[8]: (23, 44, 12, 9)
-
-In [9]: a
-Out[9]: [1, 4, 12, 18, 65]
-
-In [10]: 12 in a
-Out[10]: True
-
-In [11]: 13 in a
-Out[11]: False
-
-In [12]: 13 not in a
-Out[12]: True
-
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-POSERO>> let b:posero_fake_type = '\v^In |\v^   ...'
-POSERO>> let b:posero_push_on_non_fake = 1
-POSERO>> let b:posero_syntax = "ipython"
-
-"List comprehension"
-
-In [1]: squares = [n*n for n in [1, 2, 8, 81]]
-
-In [2]: squares
-Out[2]: [1, 4, 64, 6561]
-
-In [3]: odd_squares = [n*n for n in range(12) if n % 2 == 0]
-
-In [4]: odd_squares
-Out[4]: [0, 4, 16, 36, 64, 100]
-
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-POSERO>> let b:posero_fake_type = '\v^In |\v^   ...'
-POSERO>> let b:posero_push_on_non_fake = 1
-POSERO>> let b:posero_syntax = "ipython"
-
-██╗████████╗███████╗██████╗  █████╗ ████████╗ ██████╗ ██████╗ ███████╗
-██║╚══██╔══╝██╔════╝██╔══██╗██╔══██╗╚══██╔══╝██╔═══██╗██╔══██╗██╔════╝
-██║   ██║   █████╗  ██████╔╝███████║   ██║   ██║   ██║██████╔╝███████╗
-██║   ██║   ██╔══╝  ██╔══██╗██╔══██║   ██║   ██║   ██║██╔══██╗╚════██║
-██║   ██║   ███████╗██║  ██║██║  ██║   ██║   ╚██████╔╝██║  ██║███████║
-╚═╝   ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝    ╚═════╝ ╚═╝  ╚═╝╚══════╝
-
-In [1]: for i in range(6):
-   ...:     print(i)
-   ...:
-0
-1
-2
-3
-4
-5
-
-In [2]: range(3)
-Out[2]: range(0, 3)
-
-In [3]: for char in "python":
-   ...:     print(char)
-   ...:
-p
-y
-t
-h
-o
-n
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 POSERO>> let b:posero_fake_type = '\v^In |\v^   ...'
@@ -839,7 +703,7 @@ POSERO>> let b:posero_syntax = "ipython"
  ██║████╔╝██║    ██╔══██╗██╔══╝  ██╔══██║╚════██║██║   ██║██║╚██╗██║╚════██║
  ██║╚██████╔╝    ██║  ██║███████╗██║  ██║███████║╚██████╔╝██║ ╚████║███████║
  ╚═╝ ╚═════╝     ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚══════╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝
-                                                              to like Python
+                                                              to love Python
 
 1 > Python is installed by default almost everywhere.
 2 > Python does not need IDE.
@@ -855,6 +719,14 @@ POSERO>> let b:posero_syntax = "ipython"
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 POSERO>> let b:posero_push_all = 0
 
-PYTHON (3) by gdubus
+ ██████╗ ██╗   ██╗███████╗███████╗████████╗██╗ ██████╗ ███╗   ██╗ ██╗███████╗██╗ 
+██╔═══██╗██║   ██║██╔════╝██╔════╝╚══██╔══╝██║██╔═══██╗████╗  ██║██╔╝██╔════╝╚██╗
+██║   ██║██║   ██║█████╗  ███████╗   ██║   ██║██║   ██║██╔██╗ ██║██║ ███████╗ ██║
+██║▄▄ ██║██║   ██║██╔══╝  ╚════██║   ██║   ██║██║   ██║██║╚██╗██║██║ ╚════██║ ██║
+╚██████╔╝╚██████╔╝███████╗███████║   ██║   ██║╚██████╔╝██║ ╚████║╚██╗███████║██╔╝
+ ╚══▀▀═╝  ╚═════╝ ╚══════╝╚══════╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝ ╚═╝╚══════╝╚═╝ 
 
-Some questions
+                                                                PYTHON (3) by GUS
+                                                                with VIM & POSERO
+
+" vim:foldmethod=manual:foldlevel=9
