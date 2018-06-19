@@ -1,0 +1,257 @@
+Equivalences entre les unités de mesure de l’énergie 
+|                | tep        | tec        | Joule     | kWh PCI   | BTU       | m3 de gaz | t bois 20% |
+| tep            | 1          | 0,697      | 2,38 E-11 | 8,57 E-05 | 2,51 E-08 | 0,00083   | 0,334      |
+| tec            | 1,43       | 1          | 3,41 E-11 | 1,23 E-04 | 3,60 E-08 | 0,00120   | 0,479      |
+| Joule          | 4,20 E+10  | 2,93 E+10  | 1         | 3,60 E+06 | 1 055     | 3,50 E+07 | 1,40 E+10  |
+| kWh PCI        | 11 667     | 8 136      | 2,78 E-07 | 1         | 0,00029   | 9,7       | 3 900      |
+| BTU            | 39 808 351 | 27 759 690 | 0,000948  | 3 412     | 1         | 33 174    | 13 307 363 |
+| m 3 de gaz     | 1 200      | 837        | 2,86 E-08 | 0,10      | 3,01 E-05 | 1         | 401        |
+| tonne bois 20% | 2,99       | 2,09       | 7,12 E-11 | 2,56 E-04 | 7,51 E-08 | 0,00249   | 1          |
+
+ep : tonne équivalent pétrole
+tec : tonne équivalent charbon
+BTU : British Thermal Unit
+
+Sources: l’ADEME , l'Observatoire de l'Energie, le Comité Professionnel du Pétrole (CPDP), le Ministère de l'Environnement et du Développement Du rable et la Commission Européenne.
+
+Facteurs d'émission des combustibles liquides, combustion seule. 
+| Source d'énergie                 | kg équivalent carbone par tonne | kg équivalent carbone par kWh | kg équivalent carbone par tep PCI | kg équivalent carbone par litre |
+| Gaz de Pétrole Liquéfié - GPL    | 803                             | 0,063                         | 733                               | 0,432                           |
+| Supercarburant (ARS, SP95, SP98) | 876                             | 0,072                         | 836                               | 0,661                           |
+| Gazole                           | 859                             | 0,074                         | 859                               | 0,726                           |
+| Fuel domestique                  | 859                             | 0,074                         | 859                               | 0,726                           |
+| Fuel lourd                       | 851                             | 0,077                         | 893                               | 0,851                           |
+| Pétrole brut                     | 836                             | 0,072                         | 836                               | 0,726                           |
+| Carburéacteur                    | 852                             | 0,073                         | 848                               | 0,682                           |
+
+Facteurs d’émission (amont et combustion) de différents carburants 
+| Combustible                      | kg équ. C par tonne                     | kg équ. C par kWh                       | kg équ. C par tep       | kg équ. C par litre     |
+|                                  | production          | combustion        | production        | combustion          | production | combustion | production | combustion |
+| Pétrole brut                     | 60                  | 836               | 0,005             | 0,072               | 59         | 833        | 0,05       | 0,75       |
+| Fioul lourd                      | 116                 | 851               | 0,010             | 0,077               | 121        | 890        | 0,10       | 0,77       |
+| Fioul domestique                 | 91                  | 859               | 0,008             | 0,074               | 90         | 856        | 0,08       | 0,73       |
+| Gazole                           | 91                  | 859               | 0,008             | 0,074               | 90         | 856        | 0,08       | 0,73       |
+| Kérosène                         | 78                  | 888               | 0,006             | 0,073               | 74         | 845        | 0,07       | 0,75       |
+| Carburéacteur                    | 78                  | 852               | 0,006             | 0,070               | 74         | 811        | 0,06       | 0,68       |
+| Essence moteurs terrestres       | 148                 | 876               | 0,012             | 0,072               | 140        | 833        | 0,11       | 0,66       |
+| Essence aviation                 | 148                 | 876               | 0,012             | 0,072               | 140        | 833        | 0,11       | 0,66       |
+| Naphta                           | 78                  | 896               | 0,006             | 0,072               | 72         | 833        |            |            |
+| Huile de schiste                 | 708                 | 717               | 0,071             | 0,072               | 823        | 833        |
+| Huile usée                       | 78                  | 0                 | 0,006             | 0,072               | 75         | 833        |
+| Solvant usagé                    | 78                  | 489               | 0,004             | 0,069               | 47         | 799        |
+| lubrifiants usagés               | 78                  | 800               | 0,006             | 0,072               | 75         | 833        | 0,07       | 0,73       |
+| White spirit                     | 78                  | 834               | 0,007             | 0,072               | 78         | 833        | 0,06       | 0,65       |
+| Bitumes                          | 77                  | 436               | 0,006             | 0,039               | 73         | 457        |            |            |
+| Autres    produits    pétroliers | 78                  | 800               | 0,006             | 0,072               | 75         | 833        |            |            |
+| (graisses, aromatiques, etc)     |                     |                   |                   |                     |            |            |            |            |
+| Gaz naturel liquéfié (GNV)       | 138                 | 771               | 0,010             | 0,056               | 116        | 651        |            |            |
+| Gaz de pétrole liquéfié (GPL)    | 150                 | 803               | 0,012             | 0,063               | 136        | 731        | 0,08       | 0,43       |
+
+Facteurs d’émission de la combustion du gaz (GDF Suez, 2007)
+| Source d'énergie | kg équivalent carbone par tonne | kg équivalent carbone par kWh | kg équivalent carbone par tep (énergie finale) |
+| Gaz naturel      | 755                             | 0,055                         | 637                                            |
+
+Facteurs d’émission de la production d’électricité par pays en 2006
+| Pays                     | Grammes équivalent carbone par kWh |
+| Afrique du Sud           | 0,237                              |
+| Albanie                  | 0,009                              |
+| Algérie                  | 0,188                              |
+| Allemagne                | 0,110                              |
+| Angola                   | 0,027                              |
+| Antilles néerlandaises   | 0,196                              |
+| Arabie Saoudite          | 0,206                              |
+| Argentine                | 0,083                              |
+| Arménie                  | 0,038                              |
+| Australie                | 0,251                              |
+| Autriche                 | 0,058                              |
+| Azerbaidjan              | 0,129                              |
+| Bahrain                  | 0,225                              |
+| Bangladesh               | 0,159                              |
+| Belgique                 | 0,071                              |
+| Benin                    | 0,190                              |
+| Biélorussie              | 0,081                              |
+| Birmanie                 | 0,092                              |
+| Bolivie                  | 0,138                              |
+| Bosnie Herzégovine       | 0,219                              |
+| Botswana                 | 0,505                              |
+| Bresil                   | 0,022                              |
+| Brunei                   | 0,224                              |
+| Bulgarie                 | 0,122                              |
+| Cambodge                 | 0,274                              |
+| Cameroun                 | 0,012                              |
+| Canada                   | 0,050                              |
+| Chili                    | 0,080                              |
+| Chine                    | 0,215                              |
+| Chypre                   | 0,207                              |
+| Colombie                 | 0,041                              |
+| Congo                    | 0,028                              |
+| Congo Démocratique       | 0,001                              |
+| Corée du Nord            | 0,145                              |
+| Corée du Sud             | 0,127                              |
+| Corse                    | 0,140                              |
+| Costa Rica               | 0,013                              |
+| Côte d'Ivoire            | 0,119                              |
+| Croatie                  | 0,087                              |
+| Cuba                     | 0,278                              |
+| Danemark                 | 0,093                              |
+| Dominique                | 0,170                              |
+| Egypte                   | 0,128                              |
+| Emirats Arabes Unis      | 0,224                              |
+| Equateur                 | 0,108                              |
+| Erythrée                 | 0,188                              |
+| Espagne                  | 0,095                              |
+| Estonie                  | 0,175                              |
+| Ethiopie                 | 0,001                              |
+| Finlande                 | 0,066                              |
+| France                   | 0,023                              |
+| Gabon                    | 0,095                              |
+| Géorgie                  | 0,040                              |
+| Ghana                    | 0,075                              |
+| Gibraltar                | 0,199                              |
+| Grèce                    | 0,198                              |
+| Guatemala                | 0,091                              |
+| Haiti                    | 0,083                              |
+| Honduras                 | 0,113                              |
+| Hong Kong                | 0,233                              |
+| Hongrie                  | 0,094                              |
+| Inde                     | 0,257                              |
+| Indonesie                | 0,185                              |
+| Irak                     | 0,191                              |
+| Iran                     | 0,140                              |
+| Irlande                  | 0,146                              |
+| Islande                  | 0,000                              |
+| Israel                   | 0,211                              |
+| Italie                   | 0,110                              |
+| Jamaïque                 | 0,226                              |
+| Japon                    | 0,114                              |
+| Jordanie                 | 0,164                              |
+| Kazakhstan               | 0,142                              |
+| Kenya                    | 0,086                              |
+| Kirghistan               | 0,022                              |
+| Koweit                   | 0,175                              |
+| Latvia                   | 0,046                              |
+| Liban                    | 0,190                              |
+| Libye                    | 0,240                              |
+| Lituanie                 | 0,038                              |
+| Luxembourg               | 0,089                              |
+| Macédoine                | 0,169                              |
+| Malaisie                 | 0,179                              |
+| Malte                    | 0,227                              |
+| Maroc                    | 0,193                              |
+| Mexique                  | 0,148                              |
+| Moldavie                 | 0,130                              |
+| Mongolie                 | 0,143                              |
+| Mozambique               | 0,000                              |
+| Namibie                  | 0,021                              |
+| Nepal                    | 0,001                              |
+| Nicaragua                | 0,150                              |
+| Nigeria                  | 0,105                              |
+| Norvège                  | 0,002                              |
+| Nouvelle Zélande         | 0,084                              |
+| Oman                     | 0,233                              |
+| Ouzbékistan              | 0,122                              |
+| Pakistan                 | 0,113                              |
+| Panama                   | 0,062                              |
+| Paraguay                 | 0,000                              |
+| Pays-Bas                 | 0,107                              |
+| Perou                    | 0,047                              |
+| Philippines              | 0,119                              |
+| Pologne                  | 0,180                              |
+| Portugal                 | 0,113                              |
+| Quatar                   | 0,171                              |
+| République Slovaque      | 0,061                              |
+| République Tchèque       | 0,144                              |
+| Roumanie                 | 0,117                              |
+| Royaume-Uni              | 0,138                              |
+| Russie                   | 0,090                              |
+| Saint Barthélémy         | 0,206                              |
+| Salvador                 | 0,059                              |
+| Senegal                  | 0,198                              |
+| Serbie-Monténégro        | 0,195                              |
+| Singapour                | 0,146                              |
+| Slovénie                 | 0,091                              |
+| Soudan                   | 0,167                              |
+| Sri Lanka                | 0,086                              |
+| Suède                    | 0,013                              |
+| Suisse                   | 0,007                              |
+| Syrie                    | 0,165                              |
+| Tadjikistan              | 0,008                              |
+| Taïwan                   | 0,180                              |
+| Tanzanie                 | 0,086                              |
+| Thaïlande                | 0,139                              |
+| Togo                     | 0,125                              |
+| Trinité et Tobago        | 0,197                              |
+| Tunisie                  | 0,149                              |
+| Turkmenistan             | 0,217                              |
+| Turquie                  | 0,119                              |
+| UE à 27                  | 0,083                              |
+| Ukraine                  | 0,094                              |
+| Uruguay                  | 0,081                              |
+| USA                      | 0,152                              |
+| Venezuela                | 0,057                              |
+| Vietnam                  | 0,108                              |
+| Yemen                    | 0,224                              |
+| Zambie                   | 0,002                              |
+| Zimbabwe                 | 0,156                              |
+| Moyenne Afrique          | 0,176                              |
+| Moyenne Asie             | 0,199                              |
+| Moyenne Ex-URSS          | 0,093                              |
+| Moyenne Moyen Orient     | 0,183                              |
+| Moyenne Pacifique        | 0,138                              |
+| Moyenne Amérique du Nord | 0,140                              |
+| Moyenne Amérique Latine  | 0,053                              |
+| Moyenne mondiale         | 0,138                              |
+Incertitude : 15%
+
+Energie consommée par certains appareils
+| Type d’appareil ou de consommation                | kWh par an | Kg equ C par kWh | Taux d'équipement 2001 |
+| Ascenseur par habitant.étage                      | 18         | 0,016            |                        |
+| Ascenseur moyenne par logement                    | 220        | 0,016            |                        |
+| Réfrigérateur                                     | 250        | 0,011            | 49%                    |
+| Réfrigérateur-congelateur                         | 600        | 0,011            | 56%                    |
+| Congélateur                                       | 615        | 0,011            | 47%                    |
+| Congélateur américain                             | 1 640      | 0,011            | 5%                     |
+| Adoucisseur d'eau                                 | 20         | 0,011            |                        |
+| Cafetière & machines à expresso                   | 30         | 0,017            |                        |
+| Lave-linge                                        | 250        | 0,022            | 90%                    |
+| Lave-vaisselle                                    | 285        | 0,017            | 39%                    |
+| Séche-linge                                       | 430        | 0,017            | 30%                    |
+| TV moyenne                                        | 192        | 0,017            | 137%                   |
+| Téléviseur principal                              | 307        | 0,017            | 100%                   |
+| TV secondaire                                     | 47         | 0,017            | 37%                    |
+| TV plasma                                         | 502        | 0,017            |                        |
+| TV LCD                                            | 228        | 0,017            |                        |
+| Videoprojecteur                                   | 153        | 0,017            |                        |
+| TV Retroprojecteur                                | 590        | 0,017            |                        |
+| Magnétoscope                                      | 40         | 0,017            | 60%                    |
+| Home Cinema                                       | 58         | 0,017            |                        |
+| Décodeur Canal +                                  | 96         | 0,017            | 20%                    |
+| Démodulateurs                                     | 84         | 0,017            | 20%                    |
+| Lecteur DVD                                       | 21         | 0,017            |                        |
+| Hi Fi compact                                     | 42         | 0,017            |                        |
+| Chaîne HifI                                       | 70         | 0,017            |                        |
+| Minichaîne portable                               | 14         | 0,017            |                        |
+| Jeux vidéo                                        | 20         | 0,017            |                        |
+| Totalité du poste audiovisuel moyenne             | 546        | 0,017            | 100%                   |
+| Ordinateur domestique + ecran moyenne             | 219        | 0,017            |                        |
+| Ordinateur fixe moyenne                           | 278        | 0,017            |                        |
+| Ordinateur fixe principal                         | 329        | 0,017            |                        |
+| Ordinateur fixe secondaire                        | 91         | 0,017            |                        |
+| Unité centrale moyenne                            | 227        | 0,017            |                        |
+| Ecrans seuls moyenne                              | 66         | 0,017            |                        |
+| Ecrans cathodiques moyenne                        | 171        | 0,017            |                        |
+| Ecrans LCD moyenne                                | 47         | 0,017            |                        |
+| Ordinateur portable moyenne                       | 35         | 0,017            |                        |
+| Ordinateur portable principal                     | 59         | 0,017            |                        |
+| Box et modems Internet                            | 67         | 0,017            |                        |
+| Imprimante                                        | 22         | 0,017            |                        |
+| Scanner                                           | 20         | 0,017            |                        |
+| Totalité du poste informatique moyenne            | 396        | 0,017            |                        |
+| Aquarium                                          | 610        | 0,011            |                        |
+| Répondeur téléphonique                            | 25         | 0,017            | 10%                    |
+| Téléphone répondeur                               | 45         | 0,017            | 80%                    |
+| Aspirateur                                        | 18         | 0,017            | 80%                    |
+| Eclairage                                         | 465        | 0,032            | 100%                   |
+| Fer à repasser                                    | 40         | 0,017            | 80%                    |
+| Pompe de piscine                                  | 1 500      | 0,017            | 0%                     |
+| Totalité des consommations électriques en cuisine | 568        | 0,016            | 100%                   |
