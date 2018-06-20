@@ -7,6 +7,9 @@ POSERO>> let b:posero_push_all = 0
 ██║        ██║      ██║   ██║  ██║╚██████╔╝██║ ╚████║    ██████╔╝
 ╚═╝        ╚═╝      ╚═╝   ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝    ╚═════╝
                                                            by Gus
+                                                       Suipotryot
+                                                    #DevfestLille
+
 
 Subjects:
     Python basics
@@ -42,7 +45,7 @@ Linux:
 $ apt-get install python3
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-POSERO>> let b:posero_fake_type = '\v^\$ |\v^\(python'
+POSERO>> let b:posero_fake_type = '\v^\$ |\v^\(python|\v^Mac'
 POSERO>> let b:posero_push_on_non_fake = 1
 POSERO>> let b:posero_syntax = "shell"
 
@@ -113,23 +116,7 @@ Werkzeug==0.14.1
 Python 3.6.4
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-POSERO>> let b:posero_fake_type = '\v^\$ |\v^\(python'
-POSERO>> let b:posero_push_on_non_fake = 1
-POSERO>> let b:posero_syntax = "ipython"
-
-(python_demo) $ pip freeze > requirements.txt
-
-(python_demo) $ deactivate
-
-$ cd ../my_other_project
-
-$ source other_venv/bin/activate
-
-(other_venv) $ pip install -r requirements.txt
-[...]
-
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-POSERO>> let b:posero_fake_type = '\v^In [|\v^   ...|\v^>'
+POSERO>> let b:posero_fake_type = '\v^\>'
 POSERO>> let b:posero_push_on_non_fake = 1
 POSERO>> let b:posero_syntax = "ipython"
 
@@ -139,7 +126,6 @@ POSERO>> let b:posero_syntax = "ipython"
  ███╔╝  ██╔══╝  ██║╚██╗██║
 ███████╗███████╗██║ ╚████║
 ╚══════╝╚══════╝╚═╝  ╚═══╝
-
 
 > import this
 The Zen of Python, by Tim Peters
@@ -158,47 +144,68 @@ If the implementation is hard to explain, it s a bad idea.
 [...]
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-POSERO>> let b:posero_fake_type = '\v^In '
+POSERO>> let b:posero_fake_type = '\v^\>'
 POSERO>> let b:posero_push_on_non_fake = 1
 POSERO>> let b:posero_syntax = "ipython"
 
-"Readability counts." => Block == Indent
+██╗███╗   ██╗██████╗ ███████╗███╗   ██╗████████╗
+██║████╗  ██║██╔══██╗██╔════╝████╗  ██║╚══██╔══╝
+██║██╔██╗ ██║██║  ██║█████╗  ██╔██╗ ██║   ██║   
+██║██║╚██╗██║██║  ██║██╔══╝  ██║╚██╗██║   ██║   
+██║██║ ╚████║██████╔╝███████╗██║ ╚████║   ██║   
+╚═╝╚═╝  ╚═══╝╚═════╝ ╚══════╝╚═╝  ╚═══╝   ╚═╝   
 
-In [1]: if 42 > 12:
-   ...:     print("Beware of the groove !")
+"Readability counts."
+
+> if 42 > 12:
+>     print("Beware of the groove !")
+>     print("The grooooooove...")
 
 Beware of the groove !
+The grooooooove...
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-POSERO>> let b:posero_fake_type = '\v^In '
+POSERO>> let b:posero_fake_type = '\v^\>'
 POSERO>> let b:posero_push_on_non_fake = 1
 POSERO>> let b:posero_syntax = "ipython"
+
+██╗  ██╗███████╗██╗   ██╗██╗    ██╗ ██████╗ ██████╗ ██████╗ ███████╗
+██║ ██╔╝██╔════╝╚██╗ ██╔╝██║    ██║██╔═══██╗██╔══██╗██╔══██╗██╔════╝
+█████╔╝ █████╗   ╚████╔╝ ██║ █╗ ██║██║   ██║██████╔╝██║  ██║███████╗
+██╔═██╗ ██╔══╝    ╚██╔╝  ██║███╗██║██║   ██║██╔══██╗██║  ██║╚════██║
+██║  ██╗███████╗   ██║   ╚███╔███╔╝╚██████╔╝██║  ██║██████╔╝███████║
+╚═╝  ╚═╝╚══════╝   ╚═╝    ╚══╝╚══╝  ╚═════╝ ╚═╝  ╚═╝╚═════╝ ╚══════╝
 
 "Simple is better than complex."
 
-In [0]: import keyword
+> import keyword
 
-In [1]: print(keyword.kwlist)
-Out[1]: ['False', 'None', 'True', 'and', 'as', 'assert', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield']
+> print(keyword.kwlist)
+['False', 'None', 'True', 'and', 'as', 'assert', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield']
 
-In [2]: len(keyword.kwlist)
-Out[2]: 33
+> len(keyword.kwlist)
+33
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-POSERO>> let b:posero_fake_type = '\v^>'
+POSERO>> let b:posero_fake_type = '\v^\>'
 POSERO>> let b:posero_push_on_non_fake = 1
 POSERO>> let b:posero_syntax = "ipython"
 
-"Duck typing"
+██████╗ ██╗   ██╗ ██████╗██╗  ██╗
+██╔══██╗██║   ██║██╔════╝██║ ██╔╝
+██║  ██║██║   ██║██║     █████╔╝      __
+██║  ██║██║   ██║██║     ██╔═██╗    <(o )___
+██████╔╝╚██████╔╝╚██████╗██║  ██╗    ( ._> /
+╚═════╝  ╚═════╝  ╚═════╝╚═╝  ╚═╝     `---' 
 
-> a = "hello"
+> a = "One ring"
 
-> b = " futur python addict"
+> b = " to rule them all"
 
 > a + b
-'hello futur python addict'
+'One ring to rule them all'
 
-> c = 18
+> c = 5
 
 > a + c
 ---------------------------------------------------------------------------
@@ -209,10 +216,10 @@ TypeError                                 Traceback (most recent call last)
 TypeError: must be str, not int
 
 > a * c
-'hellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohello'
+'One ringOne ringOne ringOne ringOne ring'
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-POSERO>> let b:posero_fake_type = '\v^>'
+POSERO>> let b:posero_fake_type = '\v^\>'
 POSERO>> let b:posero_push_on_non_fake = 1
 POSERO>> let b:posero_syntax = "python"
 
@@ -231,7 +238,7 @@ $ ipython
 | Appareil électrique                             | Puissance en Watts | Période d’utilisation | Fréquence d’utilisation | Consommation annuelle moyenne |
 | Frigo combi (250 litres), label A+              | 150 à 200 W        | 365 jours             | En continu              | 201 kWh *                     |
 | Frigo combi (250 litres), label C               | 200 à 350 W        | 365 jours             | En continu              | 500 kWh                       |
-| Conditionnement d'air                           | 2600 à 4000 W      | 60 jours              | 5h/jour                 | 960 kWh                       |
+| Conditionnement d air                           | 2600 à 4000 W      | 60 jours              | 5h/jour                 | 960 kWh                       |
 | TV tube cathodique en service                   | 80 à 100 W         | 335 jours             | 4h/jour                 | 121 kWh                       |
 [...]
 
@@ -252,7 +259,7 @@ $ ipython
 ['', ' Appareil électrique                            ', 'Puissance en Watts', 'Période d’utilisation', 'Fréquence d’utilisation', 'Consommation annuelle moyenne ', '']
 ['', ' Frigo combi (250 litres), label A+             ', '150 à 200 W       ', '365 jours            ', 'En continu             ', '201 kWh *                     ', '']
 ['', ' Frigo combi (250 litres), label C              ', '200 à 350 W       ', '365 jours            ', 'En continu             ', '500 kWh                       ', '']
-['', ' Conditionnement d'air                          ', '2600 à 4000 W     ', '60 jours             ', '5h/jour                ', '960 kWh                       ', '']
+['', ' Conditionnement d air                          ', '2600 à 4000 W     ', '60 jours             ', '5h/jour                ', '960 kWh                       ', '']
 
 > with open("electrical_consumption.data", "r") as data_file:
 >     data_raw = data_file.read()
@@ -267,7 +274,7 @@ Période d’utilisation
 [...]
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-POSERO>> let b:posero_fake_type = '\v^In |\v^   ...|\v^"'
+POSERO>> let b:posero_fake_type = '\v^\>'
 POSERO>> let b:posero_push_on_non_fake = 1
 POSERO>> let b:posero_syntax = "ipython"
 
@@ -345,7 +352,7 @@ POSERO>> let b:posero_syntax = "python"
 >     data_handler.fetch_data()
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-POSERO>> let b:posero_fake_type = '\v^>'
+POSERO>> let b:posero_fake_type = '\v^\>'
 POSERO>> let b:posero_push_on_non_fake = 1
 POSERO>> let b:posero_syntax = "ipython"
 

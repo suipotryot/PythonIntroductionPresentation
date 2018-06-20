@@ -1,3 +1,19 @@
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+POSERO>> let b:posero_fake_type = '\v^\$ |\v^\(python'
+POSERO>> let b:posero_push_on_non_fake = 1
+POSERO>> let b:posero_syntax = "ipython"
+
+(python_demo) $ pip freeze > requirements.txt
+
+(python_demo) $ deactivate
+
+$ cd ../my_other_project
+
+$ source other_venv/bin/activate
+
+(other_venv) $ pip install -r requirements.txt
+[...]
+
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 POSERO>> let b:posero_fake_type = '\v^In |\v^   ...|\v^"'
